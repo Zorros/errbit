@@ -4,6 +4,7 @@ rails:
   servers:
   - server:
       unique_name: errbit-prod
+      vendor: aws
+      region: eu-west-1
       size: t3.small
       root_disk_size: 500
-      region: eu-west-1
