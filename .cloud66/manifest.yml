@@ -8,3 +8,4 @@ rails:
       region: eu-west-1
       size: t3.small
       root_disk_size: 500
+      key_name: Amazon Web Services
