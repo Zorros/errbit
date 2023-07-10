@@ -3,6 +3,7 @@ rails:
     ruby_version: 2.7.6
   servers:
   - server:
+      unique_name: errbit-prod
       size: t3.small
       root_disk_size: 500
       region: eu-west-1
