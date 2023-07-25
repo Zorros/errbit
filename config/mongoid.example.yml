@@ -1,21 +1,9 @@
-# Mongoid Configuration
-# =====================
-#
-# Copy this file to config/mongoid.yml and
-# modify it accordingly. This file will automatically
-# be copied to shared/config on the server when
-# `cap deploy:setup` is ran the first time. Be sure
-# to place production specific settings there
-
-defaults: &defaults
-  host: localhost
-  identity_map_enabled: true
-
-# set these environment variables on your prod server
 production:
-  <<: *defaults
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
+  clients:
+    default:
+      database: <%= ENV['MONGODB_DATABASE']%>
+      hosts: ["robin.errbit.c66.me:27017"]
+      options:
+        auth_source: admin
+        user: <%= ENV['MONGODB_USERNAME']%>
+        password: <%= ENV['MONGODB_PASSWORD']%>
