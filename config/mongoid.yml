@@ -1,0 +1,9 @@
+production:
+  clients:
+    default:
+      database: <%= ENV['MONGODB_DATABASE']%>
+      hosts: ["robin.errbit.c66.me:27017"]
+      options:
+        auth_source: admin
+        user: <%= ENV['MONGODB_USERNAME']%>
+        password: <%= ENV['MONGODB_PASSWORD']%>
